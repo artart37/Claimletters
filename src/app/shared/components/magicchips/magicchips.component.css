@@ -1,0 +1,93 @@
+:host{
+    display: block;
+    height: 100%;
+    width: 100%;
+    max-width: 1128px;
+    margin: 1rem auto;
+}
+
+.magiccardscontainerwrapper{
+    display: block;
+    overflow: visible;
+    height: inherit;
+    width: inherit;
+}
+
+.magiccardscontainer{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+    height: auto;
+    width: inherit;
+    box-sizing: border-box;
+}
+
+.magiccardschild{
+    padding: 0 1rem;
+    height: 100%;
+    min-height: 4.6rem;
+    position: relative;
+    box-sizing: inherit;
+    border: none;
+    margin: 1rem 0.5rem 1rem 0;
+    flex: 1 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2.3rem; /* half of the height */
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.magiccardschild.tall{
+    min-height: 5.6rem;
+    border-radius: 2.8rem;
+}
+
+.magiccardschild.short{
+    min-height: 3.6rem;
+    border-radius: 1.8rem;
+}
+
+.magiccardschild>span{
+    font-weight: 500;
+}
+
+.white.magiccardschild{
+    border-color: #0F0F0F;
+    border: 1px solid;
+    box-sizing: border-box;
+}
+
+.white.magiccardschildstart{
+    color:#0F0F0F;
+    background-color: #FFFFFF;
+}
+
+.blue.magiccardschildstart{
+    color:#0F0F0F;
+    background-color: #e8f1f5;
+}
+
+.magiccardschildselected{
+    background-color: #005691;
+    color:#FFFFFF;
+    border: none;
+}
+.simpletext{
+    opacity: 1;
+}
+
+.checkmark {
+    visibility:hidden;
+    position: absolute;
+    content: url(/assets/images/21X17/checkmarks/solidwhite.png);
+    max-width: 21px;
+    width: 100%;
+    max-height: 17px;
+    height: auto;
+}

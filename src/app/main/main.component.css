@@ -1,0 +1,126 @@
+.main{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    color: #0F0F0F;
+ }
+ 
+ .innersection, .reverseinnersection{
+     display: flex;
+     flex-flow: row wrap;
+     align-items: center;
+     justify-content: center;
+     position: relative;
+     background-color: inherit;
+     width: 100%;
+     max-width: 1128px;
+     height: 100%;
+     margin: 0 auto;
+     box-sizing: border-box;
+     overflow: hidden;
+ }
+.white{
+    color: #FFFFFF;
+}
+
+ app-button{
+    margin: 2rem 0 0 0;
+ }
+ .end>app-button{
+     align-self: flex-end;
+ }
+ 
+ .rightbox, .leftbox{
+     width: 50%;
+     height: 100%;
+     flex: 1;
+     display: flex;
+     position: relative;
+     transform: translateX(0);
+     flex-direction: column;
+     align-items: baseline;
+     align-content: baseline;
+     justify-content: center;
+     background-color: inherit;
+ }
+ 
+ 
+ @media only screen and (max-device-width : 480px){
+    .innersection  > .rightbox, .innersection  > .leftbox, .reverseinnersection > .leftbox, .reverseinnersection > .rightbox{
+         width: calc(100% - 2rem);
+     }
+ 
+     .innersection  > .rightbox, .innersection  > .leftbox, .reverseinnersection > .leftbox, .reverseinnersection > .rightbox {
+         padding: 0 1rem 0 1rem;
+     }
+ }
+ 
+ @media only screen and (min-device-width : 481px) and (max-device-width : 910px) {
+    .innersection  > .rightbox, .innersection  > .leftbox, .reverseinnersection > .leftbox, .reverseinnersection > .rightbox {
+         width: calc(100% - 4rem);
+     }
+     .innersection  > .rightbox, .innersection  > .leftbox, .reverseinnersection > .leftbox, .reverseinnersection > .rightbox {
+         padding: 0 2rem 0 2rem;
+     }
+ }
+ 
+ @media only screen and (min-device-width : 911px) and (max-device-width : 1167px) {
+     .leftbox {
+         padding: 0 0 0 2rem;
+     }
+     .rightbox {
+         padding: 0 2rem 0 0;
+     }
+ 
+     .innersection  > .rightbox > img, .reverseinnersection > .leftbox > img{
+         width: 100%;
+         top: 0;
+         padding: inherit;
+     }
+ }
+ 
+ @media only screen and  (max-device-width : 910px) {
+ 
+     .innersection, .reverseinnersection {
+         flex-flow: column wrap;
+         position: relative;
+     }
+     .innersection  > .rightbox > img, .reverseinnersection > .leftbox > img{
+         width: 100%;
+         margin: 0 auto;
+         top: 50%;
+         left: 0;
+         padding: 0;
+         /* opacity:0.1; */
+     }
+ }
+ 
+ @media only screen and  (max-device-width : 1128px) {
+    .innersection  > .rightbox > img, .reverseinnersection > .leftbox > img{
+         right: 0;
+         bottom: 0;
+     }
+ }
+ 
+ @media only screen and  (max-device-width : 1167px) {
+    .innersection, .reverseinnersection{
+         max-width: 100%;
+         margin: 0;
+     }
+     .innersection  > .rightbox > img, .reverseinnersection > .leftbox > img{
+         /* position: absolute; */
+         z-index: 0;
+         max-width: 564px;
+         right: 0;
+         height: auto;
+     }
+     .innersection  > .rightbox, .reverseinnersection > .leftbox{
+         z-index: 1;
+     }
+ }
+ 
+ @media only screen and  (min-device-width : 1168px) {
+     .leftbox, .rightbox {
+         padding: 0;
+     }
+ }

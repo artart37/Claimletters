@@ -1,0 +1,4 @@
+/* Making sure that the main section's height is not smaller than the viewport height - the sum of the header and footer heights */
+.heightnormaliser{
+    min-height: calc(100vh - 261px);
+}
