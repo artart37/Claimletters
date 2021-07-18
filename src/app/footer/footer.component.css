@@ -23,6 +23,11 @@
     list-style:none;
     padding: 0;
 }
+
+.col1 > ul > li, .col2 > ul > li, .col3 > ul > li{
+    display: table;
+}
+
 .col1,.col2,.col3{
     flex: 0 1 auto;
 }
