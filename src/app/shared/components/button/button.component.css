@@ -13,7 +13,8 @@
     text-decoration: none;
     line-height: 1.2;
     outline: none;
-    user-select: none;
+    -ms-user-select: none;
+        user-select: none;
     -moz-user-select: none;
     -webkit-user-select: none;
     overflow: hidden;
@@ -21,20 +22,16 @@
     border: none;
     cursor: pointer;
     white-space: nowrap;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     letter-spacing: 0.2rem;
+}
+.stretch{
+    width: 100%;
 }
 .minimal{
     background-color: #FFFFFF;
     color:#0F0F0F;
-}
-
-.minimal::after{
-    content: "";
-    display: block;
-    width: 25%;
-    border-bottom: 1px solid #0F0F0F;
-    transition: width 0.2s ease-out,
 }
 
 .solid {
@@ -42,19 +39,61 @@
     color: #FFFFFF;
 }
 
-.solid::after{
+.accent{
+    background: #069BFF;
+    color: #FFFFFF;
+}
+
+.hot {
+    background: #7A0049;
+    color: #FFFFFF;
+}
+
+.minimal::after, .solid::after, .accent::after, .hot::after{
     content: "";
     display: block;
     width: 25%;
+}
+
+.minimal::after{
+    border-bottom: 1px solid #0F0F0F;
+    -webkit-transition: width 0.2s ease-out;
+    -o-transition: width 0.2s ease-out;
+    transition: width 0.2s ease-out  
+}
+.solid::after, .accent::after, .hot::after{
     border-bottom: 1px solid #FFFFFF;
+    -webkit-transition: width 0.2s ease-out;
+    -o-transition: width 0.2s ease-out;
     transition: width 0.2s ease-out;
+}
+
+.default[disabled]>.default::after,
+.solid[disabled].solid::after,
+.accent[disabled].accent::after,
+.hot[disabled].hot::after,
+.noline.default::after,
+.noline.solid::after,
+.noline.accent::after,
+.noline.hot::after,
+.noline.signin::after,
+.noline.signup::after{
+    display: none;
+}
+
+.default[disabled],
+.solid[disabled],
+.accent[disabled],
+.hot[disabled]{
+    cursor: default;
+    opacity: .5;
 }
 
 .default.signin{
     margin: 0 1rem 0 0;
 }
 
-.borders:not(.solid){
+.borders.minimal{
     border: 1px solid #0F0F0F;
 }
 
@@ -83,25 +122,79 @@
   padding: 0 18px;
 }
 
-
-:host:hover > .minimal:after, :host:hover > .solid:after  {
+:host:hover > .minimal:after, :host:hover > .solid:after, :host:hover > .accent::after, :host:hover > .hot::after  {
     width: 100%;
 }
 
+.noline{
+    -webkit-transition:background-color 0.4s ease;
+    -o-transition:background-color 0.4s ease;
+    transition:background-color 0.4s ease;
+}
+
+.accent.noline:hover{
+    background-color: #008CE9;
+}
+.accent.noline:active{
+    background-color: #007BCD;
+}
+
+.solid.noline:hover{
+    background-color: #005A96;
+}
+.solid.noline:active{
+    background-color: #006BB2;
+}
+
+.hot.noline:hover{
+    background-color: #96005A;
+}
+.hot.noline:active{
+    background-color: #B2006B;
+}
+
+.minimal.noline:hover{
+    background-color: #EEEEEE;
+}
+.minimal.noline:active{
+    background-color: #DDDDDD;
+}
+
+@media only screen and (max-device-width: 332px){
+    .default.signin, .default.signup{
+        font-size: 1.2rem;
+    }
+    .default.signin, .default.signup{
+        letter-spacing: normal;
+        padding: 0 0.5rem;
+        min-width: 45px;
+    }
+    .signin::after, .signup::after{
+        display: none;
+    }
+}; 
+
+@media only screen and (min-device-width : 333px) and (max-device-width : 480px) {
+    .default.signin, .default.signup{
+        padding: 0 0.8rem;
+        min-width: 65px;
+    }
+    .default.signin{
+        margin:0
+    }
+};
 @media only screen and (max-device-width : 480px) {
     .default{
         font-size: 1.378rem;
     }
     .default.signin, .default.signup{
-        padding: 0 1rem;
         min-height: 3.6rem;
         border-radius: 1.8rem;
     }
     .default.signin{
         margin:0
     }
-}
-
+};
 @media only screen and (min-device-width : 481px) and (max-device-width : 600px) {
     .default{
         font-size: 1.575rem;

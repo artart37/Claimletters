@@ -1,3 +1,18 @@
-<div class="central">
-    <h1 class="simple">signin works!</h1>
+<div class="central signincontainer">
+    <form class="innerform">
+        <section class="callforaction">
+            <h4 class="simplesecondaryheadline">Sign in</h4>
+            <p class="smalltext">Sign in to your Claimletters account.</p>
+        </section>
+            <label for="email" class="simpletext">E-mail</label>
+            <input type="email" id="email" required>
+            <label for="email"class="simpletext">Password</label>
+            <input type="password" id="password" required>
+            <p class="passwordforget flink" routerLink="/forgotpassword">Forgot password?</p>
+            <app-button [buttonstyle]="'accent tall round noline stretch'">Sign in</app-button>
+        <section class="footer pass">
+            <p class="smalltext">New to Claimletters?</p>
+            <app-button [buttonstyle]="'minimal tall round noline stretch borders'" routerLink="/signup">Sign up</app-button>
+        </section>
+    </form>
 </div>

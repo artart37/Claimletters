@@ -2,3 +2,27 @@
 .heightnormaliser{
     min-height: calc(100vh - 261px);
 }
+
+.middle{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+main{
+    height: 100%;
+    justify-self: stretch;
+    align-self: center;
+}
+
+@media only screen and (max-device-width : 275px){
+    .heightnormaliser{
+        min-height: calc(110vh - 261px);
+    }
+};
+
+@media only screen and (max-device-width : 480px) {
+    .middle{
+        justify-content: flex-start;
+    }
+}

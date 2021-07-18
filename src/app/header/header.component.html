@@ -2,12 +2,12 @@
     <section class="brandcontainer">
         <span routerLink="/home">Claimletters</span>
     </section>
-    <div class="signinsignup">
-        <app-button [buttonstyle]="'minimal signin'" routerLink="/signin">
-            <span>Sign in</span>
-        </app-button>
-        <app-button [buttonstyle]="'minimal borders signup'" routerLink="/signup">
-            <span>Sign up</span>
-        </app-button>
+    <div class="signinsignup" *ngIf="showsignin">
+            <app-button [buttonstyle]="'minimal signin'" routerLink="/signin">
+                <span>Sign in</span>
+            </app-button>
+            <app-button [buttonstyle]="'round minimal borders signup'" routerLink="/signup">
+                <span>Sign up</span>
+            </app-button>
     </div>
 </header>

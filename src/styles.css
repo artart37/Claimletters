@@ -72,6 +72,7 @@ display: grid;
 grid-template-rows: 60.5px calc(100% - 261px) 200.5px;
 margin: 0;
 }
+
 /* Typography */
 .special{
 display: inline-flex;
@@ -215,42 +216,78 @@ padding: 10rem 0;
 }
 /* End of structure */
 /* Media queries */
+@media only screen and (max-device-width : 315px) {
+  .heroheadline{
+    font-size: 3.808rem;
+  }
+  .simpleheadline{
+    font-size: 2.856rem;
+  }
+  .simplesecondaryheadline{
+    font-size: 2.142rem;
+  }
+  .smallsimplesecondaryheadline{
+    font-size: 1.607rem;
+  }
+  li{
+    font-size: 1.088rem;
+  }
+  p.herotext, span.herotext, .herotext>p, .herotext>span{
+    font-size: 2.176rem;
+  }
+  
+  p.largetext, span.largetext, .largetext>p, .largetext>span{
+    font-size: 1.632rem;
+  }
+  
+  p.simpletext, span.simpletext, .simpletext>p, .simpletext>span, .simpletext>li{
+    font-size: 1.224rem;
+  }
+  
+  p.smalltext, span.smalltext, .smalltext>p, .smalltext>span, .smalltext>li{
+    font-size: 1.088rem;
+  }
+}
+
+@media only screen and (min-device-width : 316px) and (max-device-width : 480px) {
+  .heroheadline{
+    font-size: 4.2rem;
+  }
+  .simpleheadline{
+    font-size: 3.15rem;
+  }
+  .simplesecondaryheadline{
+    font-size: 2.363rem;
+  }
+  .smallsimplesecondaryheadline{
+    font-size: 1.772rem;
+  }
+  li{
+    font-size: 1.2rem;
+  }
+  p.herotext, span.herotext, .herotext>p, .herotext>span{
+    font-size: 2.4rem;
+  }
+  
+  p.largetext, span.largetext, .largetext>p, .largetext>span{
+    font-size: 1.8rem;
+  }
+  
+  p.simpletext, span.simpletext, .simpletext>p, .simpletext>span, .simpletext>li{
+    font-size: 1.35rem;
+  }
+  
+  p.smalltext, span.smalltext, .smalltext>p, .smalltext>span, .smalltext>li{
+    font-size: 1.20rem;
+  }
+};
+
 @media only screen and (max-device-width : 480px) {
-.central, .footerwrapper {
-  width: calc(100% - 2rem);
-  padding: 0 1rem 0 1rem;
-}
-.heroheadline{
-  font-size: 4.2rem;
-}
-.simpleheadline{
-  font-size: 3.15rem;
-}
-.simplesecondaryheadline{
-  font-size: 2.363rem;
-}
-.smallsimplesecondaryheadline{
-  font-size: 1.772rem;
-}
-li{
-  font-size: 1.2rem;
-}
-p.herotext, span.herotext, .herotext>p, .herotext>span{
-  font-size: 2.4rem;
-}
-
-p.largetext, span.largetext, .largetext>p, .largetext>span{
-  font-size: 1.8rem;
-}
-
-p.simpletext, span.simpletext, .simpletext>p, .simpletext>span, .simpletext>li{
-  font-size: 1.35rem;
-}
-
-p.smalltext, span.smalltext, .smalltext>p, .smalltext>span, .smalltext>li{
-  font-size: 1.20rem;
-}
-}
+  .central, .footerwrapper {
+    width: calc(100% - 2rem);
+    padding: 0 1rem 0 1rem;
+  }
+};
 
 @media only screen and (min-device-width : 481px) and (max-device-width : 600px) {
 .heroheadline{

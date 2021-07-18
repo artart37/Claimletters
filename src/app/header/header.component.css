@@ -1,8 +1,9 @@
 :host{
     background-color:#FFFFFF;
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
+    justify-self: stretch;
+    align-self: center;
+    height: 60.5px;
+    box-sizing: border-box;
     padding: 1rem 0;
     margin: 0;
 }
@@ -20,7 +21,7 @@
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
-    color: #0F0F0F;
+    color: #001523;
     background-color: #FFFFFF;
     font-family: 'Montserrat', sans-serif;
     font-size: 3.3rem;
@@ -29,7 +30,6 @@
     cursor: pointer;
 }
 .signinsignup{
-    font-size: 1rem;
     display: flex;
     flex-flow: row nowrap;
     align-items: center;

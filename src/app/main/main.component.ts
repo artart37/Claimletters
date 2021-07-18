@@ -12,8 +12,12 @@ export class MainComponent implements OnInit {
   howitworks!:Array<string>;
   leftcardispresent!:boolean;
   animearr:Array<boolean>=[];
-
-  ngOnInit(): void {
+  tidyupafter(arr:Array<boolean>){
+    //Making sure that the first section of left and right doesn't run the animation twice - upon scrolling and after navigating to the main page
+    arr.length === 0?this.animearr[0] = true:null
+  }
+  constructor(){}
+  ngOnInit(): void {   
     //For my how it works
     this.howitworks = [
       "Create your account",

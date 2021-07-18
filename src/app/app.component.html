@@ -1,7 +1,7 @@
 <div class="pagecontainer" @smoothappearance>
-    <app-header class="appheader"></app-header>
-    <main class="heightnormaliser">
-       <router-outlet></router-outlet> 
+    <app-header class="appheader" [showsignin] = "headersigninsignup"></app-header>
+    <main [class]="centralized?'heightnormaliser middle':'heightnormaliser'">
+       <router-outlet (activate)="handler($event)"></router-outlet>
     </main>
     <app-footer class="appfooter"></app-footer>
 </div>

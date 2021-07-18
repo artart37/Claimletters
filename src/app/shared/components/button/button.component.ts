@@ -6,8 +6,9 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./button.component.css']
 })
 export class ButtonComponent {
-  // minimal solid borders round tall short signin signup. Default is 4.2rem height. Short is 3.6. Tall is 4.6.
+  // minimal solid accent hot borders round tall short signin signup noline stretch disabled. Default is 4.2rem height. Short is 3.6. Tall is 4.6.
   @Input() buttonstyle:string = "";
+  @Input() disabled: boolean = false;
 
   constructor() { }
 

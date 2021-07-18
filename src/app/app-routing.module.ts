@@ -13,6 +13,11 @@ const appRoutes: Routes =[
     data:{preload:true},
     loadChildren:() => import ("./signinsignup/signup/modules/signup.module").then(mod=>mod.SignupModule)
   },
+  {
+    path:"forgotpassword",
+    loadChildren:() =>import("./signinsignup/forgot-password/modules/forgot-password.module").then(mod=>mod.ForgotPasswordModule)
+  }
+
 ]
 
 @NgModule({

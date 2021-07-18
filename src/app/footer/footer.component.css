@@ -1,9 +1,12 @@
 :host{
     padding: 1rem 0;
     margin: 0;
-    min-height: 40.5px;
     background-color: #004a7c;
     color: #FFFFFF;
+    height: 200.5px;
+    box-sizing: border-box;
+    justify-self: stretch;
+    align-self: center;
 }
 
 .fmain{
