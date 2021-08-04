@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ButtonsModule } from 'src/app/shared/components/button/modules/buttons.module';
+import { ButtonsModule } from '../../shared/components/button/modules/buttons.module';
 import { RouterModule } from '@angular/router';
 import { HeaderComponent } from '../header.component';
 

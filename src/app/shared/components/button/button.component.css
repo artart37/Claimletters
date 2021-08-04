@@ -134,31 +134,31 @@
     transition:background-color 0.4s ease;
 }
 
-.accent.noline:hover{
+.accent.noline:hover:enabled{
     background-color: #008CE9;
 }
-.accent.noline:active{
+.accent.noline:active:enabled{
     background-color: #007BCD;
 }
 
-.solid.noline:hover{
+.solid.noline:hover:enabled{
     background-color: #005A96;
 }
-.solid.noline:active{
+.solid.noline:active:enabled{
     background-color: #006BB2;
 }
 
-.hot.noline:hover{
+.hot.noline:hover:enabled{
     background-color: #96005A;
 }
-.hot.noline:active{
+.hot.noline:active:enabled{
     background-color: #B2006B;
 }
 
-.minimal.noline:hover{
+.minimal.noline:hover:enabled{
     background-color: #EEEEEE;
 }
-.minimal.noline:active{
+.minimal.noline:active:enabled{
     background-color: #DDDDDD;
 }
 
