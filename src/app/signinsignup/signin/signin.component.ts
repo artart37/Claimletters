@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { AbstractControl, FormControl, FormGroup, ValidationErrors } from '@angular/forms';
-import { emailvalidation, passwordvalidation } from '../directives/customvalidation/emailpassword';
+import { FormControl, FormGroup } from '@angular/forms';
+import { emailvalidation, passwordvalidation } from '../../shared/directives/customvalidation/emailpassword';
 
 @Component({
   selector: 'app-signin',
@@ -13,16 +13,22 @@ export class SigninComponent {
   //Reactive Form
   signingroup = new FormGroup({
     email: new FormControl('', {
-      validators: emailvalidation,
-      updateOn: "blur"
+      validators: emailvalidation
     }),
     password: new FormControl('', {
-      validators: passwordvalidation,
-      updateOn: "blur"
+      validators: passwordvalidation
     })
   });
   emailMessage: string | null = "";
   passwordMessage: string | null = "";
+  showEmailError:boolean = false;
+  showPassError:boolean = false;
+  checkEmailValidity(){
+    this.showEmailError = this.email!.invalid && this.email!.dirty
+   }
+  checkPasswordValidity(){
+   this.showPassError = this.password!.invalid && this.password!.dirty
+  }
 
   get email() {
     return this.signingroup.get("email")
@@ -31,16 +37,10 @@ export class SigninComponent {
     return this.signingroup.get("password")
   }
 
-  get showPassError() {
-    return this.password?.invalid && this.password?.dirty
-  }
-
-  get showEmailError() {
-    return this.email?.invalid && this.email?.dirty
-  }
-
   //Submit the form
-  signin() { }
+  signin() {
+    console.log(this.signingroup.value);   
+  }
 
-  constructor() { }
+  constructor() {}
 }
