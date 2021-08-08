@@ -17,7 +17,7 @@
                 <span class="custommaterror" *ngIf="showPassError" [errorOb]="password?.errors" (errorMessage)="passwordMessage=$event">{{passwordMessage}}</span>
             </div>
             <p class="passwordforget flink" routerLink="/forgotpassword">Forgot password?</p>
-            <app-button [buttonstyle]="'accent tall round noline stretch'" [disabled]="!signingroup.valid" (click)="signin()">Sign in</app-button>
+            <app-button [buttonstyle]="'accent tall round noline stretch'" [disabled]="!signingroup.valid" (click)="signIn()">Sign in</app-button>
         <section class="footer pass">
             <p class="smalltext">New to Claimletters?</p>
             <app-button [buttonstyle]="'minimal tall round noline stretch borders'" routerLink="/signup">Sign up</app-button>

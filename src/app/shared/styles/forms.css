@@ -126,7 +126,109 @@ legend {
   font-weight: 700;
   color: #0F0F0F;
 }
+/* Custom Radio Input */
+.radiogroup{
+  display: block;
+  margin: 0.574rem 0;
+}
+.radiogroup > label{
+  display: inline-flex;
+  align-content: center;
+  align-items: center;
+  cursor: pointer;
+  padding: .6rem 0 .7rem 0;
+}
+.radiogroup > label, input{
+  margin: 0;
+}
+.radiogroup > label > .radioText{
+  padding: 0 0 0 0.8rem;
+}
+.radiogroup > label > .radioCheckmark{
+  box-sizing: border-box;
+  display: block;
+  height: 20px;
+  transition: border-color ease 280ms;
+  width: 20px;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #0F0F0F;
+  position: relative;
+}
+.radioCheckmark::before{
+  content: "";
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  background-color: #cdc6c640;
+  box-sizing: border-box;
+  left: -11.1562px;
+  right: auto;
+  margin: -1px 0 0 0;
+  top: -10px;
+  border: none;
+  border-radius: 50%;
+  z-index: -1;
+  opacity: 0;
+  transform: scale(0);
+  transition: background-color ease 280ms, opacity ease 280ms, transform ease 280ms;
+}
 
+.radioCheckmark::after{
+  content: "";
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  background-color: #007BCD;
+  top: 25%;
+  bottom: 25%;
+  left: calc(50% - 5px);
+  border: none;
+  border-radius: 50%;
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity ease 280ms, transform ease 280ms;
+}
+
+.radiogroup > label > .radioCheckmark:hover{
+  border-color: #6b6b6b;
+}
+
+.radiogroup > label > .radioCheckmark:hover::before{
+  opacity: 1;
+  transform: scale(1);
+}
+
+input[type=radio] {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+  outline: 0;
+  -webkit-appearance: none;
+}
+
+.radiogroup > label > input[type=radio]:checked  + .radioCheckmark::before{
+  background-color: #007bcd17;
+  opacity: 1;
+  transform: scale(1);
+}
+input[type=radio]:checked  + .radioCheckmark::after{
+  opacity: 1;
+  transform: scale(1);
+}
+
+.radiogroup > label > input[type=radio]:checked  + .radioCheckmark{
+  border-color: #007BCD;
+}
+/* End of custom Radio Input */
 fieldset {
   border-width: 0;
   padding: 0;
@@ -168,12 +270,27 @@ input[type='radio'] {
   margin: 6.5px 0 0 0;
 }
 
+@media only screen and (max-device-width : 269px) {
+  .radiogroup.leftEdge {
+    padding-left: 0;
+  }
+  .radiogroup > label > .radioCheckmark:hover::before{
+    display: none;
+  }
+};
+
 @media only screen and (max-device-width : 480px) {
   label,
   legend {
     font-size: 1.2rem;
   }
 };
+
+@media only screen and (min-device-width : 269px) and (max-device-width: 820px){
+  .radiogroup.leftEdge {
+      padding-left: 10px;
+  }
+}
 
 @media only screen and (min-device-width : 481px) and (max-device-width : 600px) {
   label,

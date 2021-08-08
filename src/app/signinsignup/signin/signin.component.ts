@@ -38,7 +38,7 @@ export class SigninComponent {
   }
 
   //Submit the form
-  signin() {
+  signIn() {
     console.log(this.signingroup.value);   
   }
 
