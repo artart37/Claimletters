@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { PageNotFoundComponent } from './errorpages/page-not-found/page-not-found.component';
 import { CustomPreloadingService } from './services/preloading/custom-preloading.service';
 
 const appRoutes: Routes =[
@@ -16,8 +17,15 @@ const appRoutes: Routes =[
   {
     path:"forgotpassword",
     loadChildren:() =>import("./signinsignup/forgot-password/modules/forgot-password.module").then(mod=>mod.ForgotPasswordModule)
+  },
+  {
+    path:"404",
+    component:PageNotFoundComponent,
+  },
+  {
+    path:"**",
+    component:PageNotFoundComponent,
   }
-
 ]
 
 @NgModule({
@@ -32,4 +40,6 @@ const appRoutes: Routes =[
 export class AppRoutingModule { }
 
 //Defining the eagerly loaded routing components, which we currently don't have.
-export const routingComponents = []
+export const routingComponents = [
+  PageNotFoundComponent
+]

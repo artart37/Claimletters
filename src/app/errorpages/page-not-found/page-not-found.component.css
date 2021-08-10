@@ -1,0 +1,12 @@
+.base64wrapper{
+    max-width: 473px;
+    height: auto;
+    margin: 0 auto;
+}
+.base64wrapper > img {
+    width: 100%;
+    height: auto;
+}
+.central{
+    text-align: center;
+}
