@@ -20,9 +20,3 @@ main{
         min-height: calc(110vh - 261px);
     }
 };
-
-@media only screen and (max-device-width : 480px) {
-    .middle{
-        justify-content: flex-start;
-    }
-}

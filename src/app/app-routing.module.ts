@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { PageNotFoundComponent } from './errorpages/page-not-found/page-not-found.component';
 import { CustomPreloadingService } from './services/preloading/custom-preloading.service';
 
 const appRoutes: Routes =[
@@ -20,11 +19,11 @@ const appRoutes: Routes =[
   },
   {
     path:"404",
-    component:PageNotFoundComponent,
+    loadChildren:() =>import("./errorpages/page-not-found/modules/page-not-found.module").then(mod=>mod.PageNotFoundModule)
   },
   {
     path:"**",
-    component:PageNotFoundComponent,
+    loadChildren:() =>import("./errorpages/page-not-found/modules/page-not-found.module").then(mod=>mod.PageNotFoundModule)
   }
 ]
 
@@ -40,6 +39,4 @@ const appRoutes: Routes =[
 export class AppRoutingModule { }
 
 //Defining the eagerly loaded routing components, which we currently don't have.
-export const routingComponents = [
-  PageNotFoundComponent
-]
+export const routingComponents = []

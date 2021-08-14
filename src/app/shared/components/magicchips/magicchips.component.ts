@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, Renderer2} from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnInit, Renderer2} from '@angular/core';
 import { Observable, Subscription } from 'rxjs';
 import { selecteditemanime } from '../../animations/mainpage';
 import { Animestatus } from '../../interfaces/animationstate';
@@ -11,6 +11,7 @@ export type Styleinterface = Animestatus & {
   selector: 'app-magicchips',
   templateUrl: './magicchips.component.html',
   styleUrls: ['./magicchips.component.css'],
+  changeDetection:ChangeDetectionStrategy.OnPush,
   animations: [ selecteditemanime ]
 })
 

@@ -1,4 +1,4 @@
-import { Component, ElementRef, HostListener, Input, OnInit, Output, EventEmitter, ViewChild } from '@angular/core';
+import { Component, ElementRef, HostListener, Input, OnInit, Output, EventEmitter, ViewChild, ChangeDetectionStrategy } from '@angular/core';
 import { howitworks } from '../../animations/mainpage';
 import { smoothScroll } from '../../customfunctions/myfunctions';
 
@@ -6,6 +6,7 @@ import { smoothScroll } from '../../customfunctions/myfunctions';
   selector: 'app-howitworks',
   templateUrl: './howitworks.component.html',
   styleUrls: ['./howitworks.component.css'],
+  changeDetection:ChangeDetectionStrategy.OnPush,
   animations:[howitworks],
 
 })
