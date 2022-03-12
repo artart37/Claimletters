@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { rightleft } from '../shared/animations/generalanime';
-
+import { HOW_IT_WORKS } from './enums/how-it-works-cards-enum';
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
@@ -20,10 +20,10 @@ export class MainComponent implements OnInit {
   ngOnInit(): void {
     //For my how it works
     this.howitworks = [
-      'Create your account',
-      'Customise the format of claims and complaints',
-      'Share your profile with your customers',
-      'Manage your claims and complaints',
+      HOW_IT_WORKS.Step1,
+      HOW_IT_WORKS.Step2,
+      HOW_IT_WORKS.Step3,
+      HOW_IT_WORKS.Step4,
     ];
   }
 }
