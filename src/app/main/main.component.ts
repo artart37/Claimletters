@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LocaleService } from '../services/backendgeneral/locale.service';
 import { rightleft } from '../shared/animations/generalanime';
 
 @Component({
@@ -16,7 +17,7 @@ export class MainComponent implements OnInit {
     //Making sure that the first section of left and right doesn't run the animation twice - upon scrolling and after navigating to the main page
     arr.length === 0?this.animearr[0] = true:null
   }
-  constructor(){}
+  constructor(private posts:LocaleService){}
   ngOnInit(): void {   
     //For my how it works
     this.howitworks = [

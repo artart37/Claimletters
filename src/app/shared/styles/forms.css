@@ -128,10 +128,13 @@ legend {
 }
 /* Custom Radio Input */
 .radiogroup{
-  display: block;
-  margin: 0.574rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 40px;
 }
 .radiogroup > label{
+  flex: 1;
   display: inline-flex;
   align-content: center;
   align-items: center;
@@ -182,7 +185,6 @@ legend {
   height: 10px;
   position: absolute;
   background-color: #007BCD;
-  top: 25%;
   bottom: 25%;
   left: calc(50% - 5px);
   border: none;
