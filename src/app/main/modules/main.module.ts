@@ -10,21 +10,14 @@ import { ObjectfilterPipe } from '../../shared//components/magicchips/pipes/obje
 import { LazyLoaderDirective } from '../../shared//directives/lazyloader.directive';
 import { CheckleftrightvpDirective } from '../../shared//directives/checkleftrightvp.directive';
 
-
-
 @NgModule({
   declarations: [
     MainComponent,
     HowitworksComponent,
     ObjectfilterPipe,
     LazyLoaderDirective,
-    CheckleftrightvpDirective
+    CheckleftrightvpDirective,
   ],
-  imports: [
-    CommonModule,
-    RouterModule,
-    ButtonsModule,
-    MainRoutingModule,
-  ]
+  imports: [CommonModule, RouterModule, ButtonsModule, MainRoutingModule],
 })
-export class MainModule { }
+export class MainModule {}
