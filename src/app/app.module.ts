@@ -6,13 +6,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { HeaderModule } from './header/modules/header.module';
 import { MainModule } from './main/modules/main.module';
 //Root routing
-import { AppRoutingModule, routingComponents } from './app-routing.module';
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 //General Components
 import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
-  declarations: [AppComponent, FooterComponent, routingComponents],
+  declarations: [AppComponent, FooterComponent],
 
   imports: [
     //General

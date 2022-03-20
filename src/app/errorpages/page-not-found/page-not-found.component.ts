@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./page-not-found.component.css'],
 })
 export class PageNotFoundComponent {
-  base64Pngsrc: string = '/assets/images/473X321/404.png';
+  errorImageSource: string = '/assets/images/473X321/404.png';
   perfectcentre: boolean = true;
   backLocation() {
     try {

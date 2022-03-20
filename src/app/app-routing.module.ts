@@ -5,12 +5,12 @@ import { CustomPreloadingService } from './services/preloading/custom-preloading
 const appRoutes: Routes =[
   {
     path:"signin",
-    data:{preload:true},
+    data:{ preload:true },
     loadChildren:() => import("./signinsignup/signin/modules/signin.module").then(mod=>mod.SigninModule)
   },
   {
     path:"signup",
-    data:{preload:true},
+    data:{ preload:true },
     loadChildren:() => import ("./signinsignup/signup/modules/signup.module").then(mod=>mod.SignupModule)
   },
   {
@@ -37,6 +37,3 @@ const appRoutes: Routes =[
 })
 
 export class AppRoutingModule { }
-
-//Defining the eagerly loaded routing components, which we currently don't have.
-export const routingComponents = []

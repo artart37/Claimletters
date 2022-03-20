@@ -1,7 +1,7 @@
 .base64wrapper{
     margin: 0 auto;
 }
-.base64wrapper > img {
+.error-container-wrapper > img {
     width: 100%;
     max-width: 473px;
     height: auto;
