@@ -1,69 +1,77 @@
-:host{
-    padding: 1rem 0;
-    margin: 0;
-    background-color: #004a7c;
-    color: #FFFFFF;
-    height: 200.5px;
-    box-sizing: border-box;
-    justify-self: stretch;
-    align-self: center;
+:host {
+  padding: 1rem 0;
+  margin: 0;
+  background-color: #004a7c;
+  color: #ffffff;
+  height: 200.5px;
+  box-sizing: border-box;
+  justify-self: stretch;
+  align-self: center;
 }
 
-.fmain{
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    justify-items: center;
-    justify-content: space-between;
-    width: 100%;
-    height: 100%;
-    box-sizing: border-box;
+.f-main {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
 }
-.col1 > ul, .col2 > ul, .col3 > ul{
-    list-style:none;
-    padding: 0;
-}
-
-.col1 > ul > li, .col2 > ul > li, .col3 > ul > li{
-    display: table;
+.col1 > ul,
+.col2 > ul,
+.col3 > ul {
+  list-style: none;
+  padding: 0;
 }
 
-.col1,.col2,.col3{
-    flex: 0 1 auto;
+.col1 > ul > li,
+.col2 > ul > li,
+.col3 > ul > li {
+  display: table;
 }
-.col1, .col2{
-    font-weight: 500;
+
+.col1,
+.col2,
+.col3 {
+  flex: 0 1 auto;
+}
+.col1,
+.col2 {
+  font-weight: 500;
 }
 .col3 {
-    font-size: 3.2rem;
-    font-weight: bold;
-    font-family: 'Montserrat', sans-serif;
-    color: #FFFFFF;
+  font-size: 3.2rem;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+  color: #ffffff;
 }
 
-.fbottom{
-    margin: 0;
-    border-top: 1px solid #002A46;
+.f-bottom {
+  margin: 0;
+  border-top: 1px solid #002a46;
+  width: 100%;
+  padding: 10px 0 0 0;
+  text-align: center;
+}
+
+@media only screen and (max-device-width: 482px) {
+  .col1,
+  .col2 {
+    width: 50%;
+  }
+  .col3 {
+    order: -1;
     width: 100%;
-    padding: 10px 0 0 0;
-    text-align: center;
+  }
+  .f-bottom {
+    text-align: left;
+  }
 }
 
-@media only screen and (max-device-width : 482px) {
-    .col1, .col2 {
-        width: 50%;
-    }
-    .col3 {
-        order: -1;
-        width: 100%;
-    }
-    .fbottom{
-       text-align: left;
-    }
-}
-
-@media only screen and (min-device-width : 481px) and (max-device-width : 600px) {
-    .col3 {
-        font-size: 2.715rem;
-    }
+@media only screen and (min-device-width: 481px) and (max-device-width: 600px) {
+  .col3 {
+    font-size: 2.715rem;
+  }
 }

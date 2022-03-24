@@ -1,22 +1,22 @@
 /* Making sure that the main section's height is not smaller than the viewport height - the sum of the header and footer heights */
-.heightnormaliser{
-    min-height: calc(100vh - 261px);
+.height-normaliser {
+  min-height: calc(100vh - 261px);
 }
 
-.middle{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.middle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-main{
-    height: 100%;
-    justify-self: stretch;
-    align-self: center;
+main {
+  height: 100%;
+  justify-self: stretch;
+  align-self: center;
 }
 
-@media only screen and (max-device-width : 275px){
-    .heightnormaliser{
-        min-height: calc(110vh - 261px);
-    }
-};
+@media only screen and (max-device-width: 275px) {
+  .height-normaliser {
+    min-height: calc(110vh - 261px);
+  }
+} ;

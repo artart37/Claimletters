@@ -1,204 +1,217 @@
-:host{
-    display: block;
-    background: transparent;
+:host {
+  display: block;
+  background: transparent;
 }
 
-.default{
-    margin: 0;
-    padding: 0 16px;
-    min-height: 4.05rem;
-    min-width: 72px;
-    border-radius: 0.449rem;
-    font-size: 1.8rem;
-    font-weight: 500;
-    text-decoration: none;
-    line-height: 1.2;
-    outline: none;
-    -ms-user-select: none;
-        user-select: none;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    overflow: hidden;
-    z-index: 1;
-    border: none;
-    cursor: pointer;
-    white-space: nowrap;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    letter-spacing: 0.2rem;
+.default {
+  margin: 0;
+  padding: 0 16px;
+  min-height: 4.05rem;
+  min-width: 72px;
+  border-radius: 0.449rem;
+  font-size: 1.8rem;
+  font-weight: 500;
+  text-decoration: none;
+  line-height: 1.2;
+  outline: none;
+  -ms-user-select: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  overflow: hidden;
+  z-index: 1;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  letter-spacing: 0.2rem;
 }
-.stretch{
-    width: 100%;
+.stretch {
+  width: 100%;
 }
-.minimal{
-    background-color: #FFFFFF;
-    color:#0F0F0F;
+.minimal {
+  background-color: #ffffff;
+  color: #0f0f0f;
 }
 
 .solid {
-    background: #004a7c;
-    color: #FFFFFF;
+  background: #004a7c;
+  color: #ffffff;
 }
 
-.accent{
-    background: #069BFF;
-    color: #FFFFFF;
+.accent {
+  background: #069bff;
+  color: #ffffff;
 }
 
 .hot {
-    background: #7A0049;
-    color: #FFFFFF;
+  background: #7a0049;
+  color: #ffffff;
 }
 
-.minimal::after, .solid::after, .accent::after, .hot::after{
-    content: "";
-    display: block;
-    width: 25%;
+.minimal::after,
+.solid::after,
+.accent::after,
+.hot::after {
+  content: "";
+  display: block;
+  width: 25%;
 }
 
-.minimal::after{
-    border-bottom: 1px solid #0F0F0F;
-    -webkit-transition: width 0.2s ease-out;
-    -o-transition: width 0.2s ease-out;
-    transition: width 0.2s ease-out  
+.minimal::after {
+  border-bottom: 1px solid #0f0f0f;
+  -webkit-transition: width 0.2s ease-out;
+  -o-transition: width 0.2s ease-out;
+  transition: width 0.2s ease-out;
 }
-.solid::after, .accent::after, .hot::after{
-    border-bottom: 1px solid #FFFFFF;
-    -webkit-transition: width 0.2s ease-out;
-    -o-transition: width 0.2s ease-out;
-    transition: width 0.2s ease-out;
+.solid::after,
+.accent::after,
+.hot::after {
+  border-bottom: 1px solid #ffffff;
+  -webkit-transition: width 0.2s ease-out;
+  -o-transition: width 0.2s ease-out;
+  transition: width 0.2s ease-out;
 }
 
-.default[disabled]>.default::after,
+.default[disabled] > .default::after,
 .solid[disabled].solid::after,
 .accent[disabled].accent::after,
 .hot[disabled].hot::after,
-.noline.default::after,
-.noline.solid::after,
-.noline.accent::after,
-.noline.hot::after,
-.noline.signin::after,
-.noline.signup::after{
-    display: none;
+.no-line.default::after,
+.no-line.solid::after,
+.no-line.accent::after,
+.no-line.hot::after,
+.no-line.signin::after,
+.no-line.signup::after {
+  display: none;
 }
 
 .default[disabled],
 .solid[disabled],
 .accent[disabled],
-.hot[disabled]{
-    cursor: default;
-    opacity: .5;
+.hot[disabled] {
+  cursor: default;
+  opacity: 0.5;
 }
 
-.default.signin{
-    margin: 0 1rem 0 0;
+.default.signin {
+  margin: 0 1rem 0 0;
 }
 
-.borders.minimal{
-    border: 1px solid #0F0F0F;
+.borders.minimal {
+  border: 1px solid #0f0f0f;
 }
 
-.short{
-    min-height: 3.6rem;
+.short {
+  min-height: 3.6rem;
 }
 
-.tall:not(.round){
-    min-height: 4.4rem; 
+.tall:not(.round) {
+  min-height: 4.4rem;
 }
 
-.tall.round{
-    min-height: 4.6rem;
+.tall.round {
+  min-height: 4.6rem;
 }
 
-.round.short:not(.tall){
-    border-radius: 1.8rem;
+.round.short:not(.tall) {
+  border-radius: 1.8rem;
 }
 
-.round:not(.tall):not(.short){
-    border-radius: 2.025rem;
+.round:not(.tall):not(.short) {
+  border-radius: 2.025rem;
 }
 
-.round.tall:not(.short){
+.round.tall:not(.short) {
   border-radius: 2.3rem;
   padding: 0 18px;
 }
 
-:host:hover > .minimal:after, :host:hover > .solid:after, :host:hover > .accent::after, :host:hover > .hot::after  {
-    width: 100%;
+:host:hover > .minimal:after,
+:host:hover > .solid:after,
+:host:hover > .accent::after,
+:host:hover > .hot::after {
+  width: 100%;
 }
 
-.default.noline{
-    letter-spacing: 0.1rem;
-    -webkit-transition:background-color 0.4s ease;
-    -o-transition:background-color 0.4s ease;
-    transition:background-color 0.4s ease;
+.default.no-line {
+  letter-spacing: 0.1rem;
+  -webkit-transition: background-color 0.4s ease;
+  -o-transition: background-color 0.4s ease;
+  transition: background-color 0.4s ease;
 }
 
-.accent.noline:hover:enabled{
-    background-color: #008CE9;
+.accent.no-line:hover:enabled {
+  background-color: #008ce9;
 }
-.accent.noline:active:enabled{
-    background-color: #007BCD;
-}
-
-.solid.noline:hover:enabled{
-    background-color: #005A96;
-}
-.solid.noline:active:enabled{
-    background-color: #006BB2;
+.accent.no-line:active:enabled {
+  background-color: #007bcd;
 }
 
-.hot.noline:hover:enabled{
-    background-color: #96005A;
+.solid.no-line:hover:enabled {
+  background-color: #005a96;
 }
-.hot.noline:active:enabled{
-    background-color: #B2006B;
-}
-
-.minimal.noline:hover:enabled{
-    background-color: #EEEEEE;
-}
-.minimal.noline:active:enabled{
-    background-color: #DDDDDD;
+.solid.no-line:active:enabled {
+  background-color: #006bb2;
 }
 
-@media only screen and (max-device-width: 332px){
-    .default.signin, .default.signup{
-        font-size: 1.2rem;
-    }
-    .default.signin, .default.signup{
-        letter-spacing: normal;
-        padding: 0 0.5rem;
-        min-width: 45px;
-    }
-    .signin::after, .signup::after{
-        display: none;
-    }
-}; 
+.hot.no-line:hover:enabled {
+  background-color: #96005a;
+}
+.hot.no-line:active:enabled {
+  background-color: #b2006b;
+}
 
-@media only screen and (min-device-width : 333px) and (max-device-width : 480px) {
-    .default.signin, .default.signup{
-        padding: 0 0.8rem;
-        min-width: 65px;
-    }
-    .default.signin{
-        margin:0
-    }
-};
-@media only screen and (max-device-width : 480px) {
-    .default{
-        font-size: 1.378rem;
-    }
-    .default.signin, .default.signup{
-        min-height: 3.6rem;
-        border-radius: 1.8rem;
-    }
-    .default.signin{
-        margin:0
-    }
-};
-@media only screen and (min-device-width : 481px) and (max-device-width : 600px) {
-    .default{
-        font-size: 1.575rem;
-    }
+.minimal.no-line:hover:enabled {
+  background-color: #eeeeee;
+}
+.minimal.no-line:active:enabled {
+  background-color: #dddddd;
+}
+
+@media only screen and (max-device-width: 332px) {
+  .default.signin,
+  .default.signup {
+    font-size: 1.2rem;
+  }
+  .default.signin,
+  .default.signup {
+    letter-spacing: normal;
+    padding: 0 0.5rem;
+    min-width: 45px;
+  }
+  .signin::after,
+  .signup::after {
+    display: none;
+  }
+}
+
+@media only screen and (min-device-width: 333px) and (max-device-width: 480px) {
+  .default.signin,
+  .default.signup {
+    padding: 0 0.8rem;
+    min-width: 65px;
+  }
+  .default.signin {
+    margin: 0;
+  }
+}
+@media only screen and (max-device-width: 480px) {
+  .default {
+    font-size: 1.378rem;
+  }
+  .default.signin,
+  .default.signup {
+    min-height: 3.6rem;
+    border-radius: 1.8rem;
+  }
+  .default.signin {
+    margin: 0;
+  }
+}
+@media only screen and (min-device-width: 481px) and (max-device-width: 600px) {
+  .default {
+    font-size: 1.575rem;
+  }
 }

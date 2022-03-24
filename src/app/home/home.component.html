@@ -1,0 +1,157 @@
+<div class="main" [(leftBoxesInView)]="animeArr">
+  <div class="section-wrapper flex-centre">
+    <section
+      class="inner-section"
+      [@rightleft]="animeArr[0] === true ? 'inview' : 'none'"
+      (@rightleft.start)="
+        $event.fromState == 'void' ? tidyUpAfter(animeArr) : null
+      "
+    >
+      <article class="left-box hero-text">
+        <h1 class="hero-headline">
+          Customer complaints and claims management system
+        </h1>
+        <p>
+          <span class="special">Track</span>,
+          <span class="special">resolve</span> and
+          <span class="special">analyse</span> customer complaints and claims
+          for as low as <span class="special">10 USD</span> per month.
+        </p>
+        <p>
+          <span class="special">Improve</span> customer retention and
+          experience.
+        </p>
+      </article>
+      <article class="right-box">
+        <img
+          src="\assets\images\564X294\bluemain.png"
+          width="564"
+          height="294"
+          alt="claims and complaints management"
+        />
+      </article>
+    </section>
+    <section class="central">
+      <app-button [buttonStyle]="'solid tall round'"
+        >Create your account now</app-button
+      >
+    </section>
+  </div>
+  <section class="central">
+    <h3 class="simple-secondary-headline">How it works</h3>
+  </section>
+  <div
+    [class]="
+      leftCardIspresent
+        ? 'section-wrapper'
+        : 'section-wrapper light-grey-section'
+    "
+  >
+    <div class="central">
+      <app-how-it-works
+        [howItWorksdata]="howItWorks"
+        (leftcardstate)="leftCardIspresent = $event"
+      ></app-how-it-works>
+    </div>
+  </div>
+  <div class="section-wrapper flex-centre">
+    <section
+      class="reverse-inner-section"
+      [@rightleft]="animeArr[1] === true ? 'inview' : 'none'"
+    >
+      <article class="left-box">
+        <img
+          src="\assets\images\564X294\track.png"
+          width="564"
+          height="294"
+          alt="track claims and complaints"
+        />
+      </article>
+      <article class="right-box">
+        <h3 class="simple-secondary-headline">
+          <span class="blue special">Track</span> customer claims and complaints
+        </h3>
+        <p class="large-text">
+          Track the progress of claims and complaints, filter and change
+          statuses.
+        </p>
+      </article>
+    </section>
+    <section class="central end">
+      <app-button [buttonStyle]="'solid tall round'">Track</app-button>
+    </section>
+  </div>
+  <div class="section-wrapper light-blue-section">
+    <div
+      class="inner-section white"
+      [@rightleft]="animeArr[2] === true ? 'inview' : 'none'"
+    >
+      <article class="left-box">
+        <h3 class="simple-secondary-headline">Custom categorisation</h3>
+      </article>
+      <article class="right-box large-text">
+        <p>
+          Categorise claims and complaints based on your unique business logic.
+        </p>
+        <p>
+          Filter complaints based on whether or not they are monetary demands
+          for compensation.
+        </p>
+      </article>
+    </div>
+  </div>
+  <div class="section-wrapper flex-centre">
+    <section
+      class="inner-section"
+      [@rightleft]="animeArr[3] === true ? 'inview' : 'none'"
+    >
+      <article class="left-box">
+        <h3 class="simple-secondary-headline">
+          <span class="blue special">Resolve</span> customer claims and
+          complaints efficiently
+        </h3>
+        <p class="large-text">
+          Focus on solving customer problems, while saving time on
+          administration.
+        </p>
+      </article>
+      <article class="right-box">
+        <img
+          src="\assets\images\564X294\resolve.png"
+          width="564"
+          height="294"
+          alt="resolve claims and complaints"
+        />
+      </article>
+    </section>
+    <section class="central">
+      <app-button [buttonStyle]="'solid tall round'">Resolve</app-button>
+    </section>
+  </div>
+  <div class="section-wrapper flex-centre">
+    <section
+      class="reverse-inner-section"
+      [@rightleft]="animeArr[4] === true ? 'inview' : 'none'"
+    >
+      <article class="left-box">
+        <img
+          src="\assets\images\564X294\analyse.png"
+          width="564"
+          height="294"
+          alt="analyse claims complaints"
+        />
+      </article>
+      <article class="right-box">
+        <h3 class="simple-secondary-headline">
+          <span class="blue special">Analyse</span> statistical data
+        </h3>
+        <p class="large-text">
+          Analyse statistical data to make improvements to your operations.
+        </p>
+      </article>
+    </section>
+    <section class="central end">
+      <app-button [buttonStyle]="'solid tall round'">Analyse</app-button>
+    </section>
+  </div>
+</div>

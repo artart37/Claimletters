@@ -3,17 +3,9 @@ import { CommonModule } from '@angular/common';
 import { ButtonsModule } from '../../shared/components/button/modules/buttons.module';
 import { RouterModule } from '@angular/router';
 import { HeaderComponent } from '../header.component';
-
-
-
-
 @NgModule({
   declarations: [HeaderComponent],
-  imports: [
-    CommonModule,
-    RouterModule,
-    ButtonsModule
-  ],
-  exports:[HeaderComponent]
+  imports: [CommonModule, RouterModule, ButtonsModule],
+  exports: [HeaderComponent],
 })
-export class HeaderModule { }
+export class HeaderModule {}

@@ -1,0 +1,17 @@
+<div class="magic-cards-container-wrapper">
+  <div class="magic-cards-container">
+    <ng-container
+      *ngFor="let itemobject of dataArray; let i = index; trackBy: trackbyID"
+    >
+      <section
+        *ngIf="itemobject | attachkey: item"
+        [class]="styleArray[i].itemclass"
+        (click)="selectedItem(i)"
+        [@selectanime]="styleArray[i].animestate"
+      >
+        <span class="simple-text">{{ itemobject | attachkey: item }}</span>
+        <span class="checkmark"></span>
+      </section>
+    </ng-container>
+  </div>
+</div>

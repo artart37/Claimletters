@@ -4,11 +4,8 @@ import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css'],
-  changeDetection:ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HeaderComponent {
-@Input() showsignin:boolean = true;
-
-  constructor() { }
-
+  @Input() showsignin: boolean = true;
 }

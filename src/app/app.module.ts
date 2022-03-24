@@ -4,7 +4,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 //Eager loading feature modules (simple and routing)
 import { HeaderModule } from './header/modules/header.module';
-import { MainModule } from './main/modules/main.module';
+import { HomeModule } from './home/modules/home.module';
 //Root routing
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -21,7 +21,7 @@ import { FooterComponent } from './footer/footer.component';
     BrowserAnimationsModule,
     //Eager Feature modules
     HeaderModule,
-    MainModule,
+    HomeModule,
     //Root routing
     AppRoutingModule,
   ],

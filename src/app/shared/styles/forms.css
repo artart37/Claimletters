@@ -1,7 +1,7 @@
 .controlgroup > fieldset,
 .controlgroup > input,
 .controlgroup > select,
-.controlgroup > textarea{
+.controlgroup > textarea {
   margin-bottom: 0;
 }
 fieldset,
@@ -10,89 +10,89 @@ select,
 textarea {
   margin-bottom: 1.5rem;
 }
-.controlgroup{
+.controlgroup {
   position: relative;
   margin-bottom: 1.5rem;
 }
 
-input[type='color'],
-input[type='date'],
-input[type='datetime'],
-input[type='datetime-local'],
-input[type='email'],
-input[type='month'],
-input[type='number'],
-input[type='password'],
-input[type='search'],
-input[type='tel'],
-input[type='text'],
-input[type='url'],
-input[type='week'],
+input[type="color"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="url"],
+input[type="week"],
 input:not([type]),
 textarea,
 select {
   -webkit-appearance: none;
   background-color: transparent;
   border: 0.1rem solid #bdbdbd;
-  border-radius: .4rem;
+  border-radius: 0.4rem;
   box-shadow: none;
   box-sizing: border-box;
   height: 3.8rem;
-  padding: .6rem 1.0rem .7rem;
+  padding: 0.6rem 1rem 0.7rem;
   width: 100%;
 }
-input[type='color'].error,
-input[type='date'].error,
-input[type='datetime'].error,
-input[type='datetime-local'].error,
-input[type='email'].error,
-input[type='month'].error,
-input[type='number'].error,
-input[type='password'].error,
-input[type='search'].error,
-input[type='tel'].error,
-input[type='text'].error,
-input[type='url'].error,
-input[type='week'].error,
+input[type="color"].error,
+input[type="date"].error,
+input[type="datetime"].error,
+input[type="datetime-local"].error,
+input[type="email"].error,
+input[type="month"].error,
+input[type="number"].error,
+input[type="password"].error,
+input[type="search"].error,
+input[type="tel"].error,
+input[type="text"].error,
+input[type="url"].error,
+input[type="week"].error,
 input:not([type]).error,
 textarea.error,
 select.error {
   border-color: #f44336;
 }
 
-input[type='color']:focus,
-input[type='date']:focus,
-input[type='datetime']:focus,
-input[type='datetime-local']:focus,
-input[type='email']:focus,
-input[type='month']:focus,
-input[type='number']:focus,
-input[type='password']:focus,
-input[type='search']:focus,
-input[type='tel']:focus,
-input[type='text']:focus,
-input[type='url']:focus,
-input[type='week']:focus,
+input[type="color"]:focus,
+input[type="date"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="email"]:focus,
+input[type="month"]:focus,
+input[type="number"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="text"]:focus,
+input[type="url"]:focus,
+input[type="week"]:focus,
 input:not([type]):focus,
 textarea:focus,
 select:focus {
-  border-color: #069BFF;
+  border-color: #069bff;
   outline: 0;
 }
 
-input[type='color']:focus.error,
-input[type='date']:focus.error,
-input[type='datetime']:focus.error,
-input[type='datetime-local']:focus.error,
-input[type='email']:focus.error,
-input[type='month']:focus.error,
-input[type='number']:focus.error,
-input[type='password']:focus.error,
-input[type='search']:focus,
-input[type='tel']:focus.error,
-input[type='text']:focus.error,
-input[type='url']:focus.error,
-input[type='week']:focus.error,
+input[type="color"]:focus.error,
+input[type="date"]:focus.error,
+input[type="datetime"]:focus.error,
+input[type="datetime-local"]:focus.error,
+input[type="email"]:focus.error,
+input[type="month"]:focus.error,
+input[type="number"]:focus.error,
+input[type="password"]:focus.error,
+input[type="search"]:focus,
+input[type="tel"]:focus.error,
+input[type="text"]:focus.error,
+input[type="url"]:focus.error,
+input[type="week"]:focus.error,
 input:not([type]):focus.error,
 textarea:focus.error,
 select:focus.error {
@@ -101,8 +101,9 @@ select:focus.error {
 }
 
 select {
-  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 8" width="30"><path fill="%23bdbdbd" d="M0,0l6,8l6-8"/></svg>') center right no-repeat;
-  padding-right: 3.0rem;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 8" width="30"><path fill="%23bdbdbd" d="M0,0l6,8l6-8"/></svg>')
+    center right no-repeat;
+  padding-right: 3rem;
 }
 
 select:focus {
@@ -124,43 +125,44 @@ legend {
   font-size: 1.4rem;
   margin: 0.574rem 0;
   font-weight: 700;
-  color: #0F0F0F;
+  color: #0f0f0f;
 }
 /* Custom Radio Input */
-.radiogroup{
+.radiogroup {
   display: flex;
   flex-direction: column;
   justify-content: center;
   min-height: 40px;
 }
-.radiogroup > label{
+.radiogroup > label {
   flex: 1;
   display: inline-flex;
   align-content: center;
   align-items: center;
   cursor: pointer;
-  padding: .6rem 0 .7rem 0;
+  padding: 0.6rem 0 0.7rem 0;
 }
-.radiogroup > label, input{
+.radiogroup > label,
+input {
   margin: 0;
 }
-.radiogroup > label > .radioText{
+.radiogroup > label > .radioText {
   padding: 0 0 0 0.8rem;
 }
-.radiogroup > label > .radioCheckmark{
+.radiogroup > label > .radioCheckmark {
   box-sizing: border-box;
   display: block;
   height: 20px;
   transition: border-color ease 280ms;
   width: 20px;
   border-radius: 50%;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border-style: solid;
   border-width: 1px;
-  border-color: #0F0F0F;
+  border-color: #0f0f0f;
   position: relative;
 }
-.radioCheckmark::before{
+.radioCheckmark::before {
   content: "";
   width: 40px;
   height: 40px;
@@ -176,15 +178,16 @@ legend {
   z-index: -1;
   opacity: 0;
   transform: scale(0);
-  transition: background-color ease 280ms, opacity ease 280ms, transform ease 280ms;
+  transition: background-color ease 280ms, opacity ease 280ms,
+    transform ease 280ms;
 }
 
-.radioCheckmark::after{
+.radioCheckmark::after {
   content: "";
   width: 10px;
   height: 10px;
   position: absolute;
-  background-color: #007BCD;
+  background-color: #007bcd;
   bottom: 25%;
   left: calc(50% - 5px);
   border: none;
@@ -194,16 +197,16 @@ legend {
   transition: opacity ease 280ms, transform ease 280ms;
 }
 
-.radiogroup > label > .radioCheckmark:hover{
+.radiogroup > label > .radioCheckmark:hover {
   border-color: #6b6b6b;
 }
 
-.radiogroup > label > .radioCheckmark:hover::before{
+.radiogroup > label > .radioCheckmark:hover::before {
   opacity: 1;
   transform: scale(1);
 }
 
-input[type=radio] {
+input[type="radio"] {
   border: 0;
   clip: rect(0 0 0 0);
   height: 1px;
@@ -217,18 +220,18 @@ input[type=radio] {
   -webkit-appearance: none;
 }
 
-.radiogroup > label > input[type=radio]:checked  + .radioCheckmark::before{
+.radiogroup > label > input[type="radio"]:checked + .radioCheckmark::before {
   background-color: #007bcd17;
   opacity: 1;
   transform: scale(1);
 }
-input[type=radio]:checked  + .radioCheckmark::after{
+input[type="radio"]:checked + .radioCheckmark::after {
   opacity: 1;
   transform: scale(1);
 }
 
-.radiogroup > label > input[type=radio]:checked  + .radioCheckmark{
-  border-color: #007BCD;
+.radiogroup > label > input[type="radio"]:checked + .radioCheckmark {
+  border-color: #007bcd;
 }
 /* End of custom Radio Input */
 fieldset {
@@ -236,19 +239,19 @@ fieldset {
   padding: 0;
 }
 
-input[type='checkbox'],
-input[type='radio'] {
+input[type="checkbox"],
+input[type="radio"] {
   display: inline;
 }
 
 .label-inline {
   display: inline-block;
   font-weight: normal;
-  margin-left: .5rem;
+  margin-left: 0.5rem;
 }
 
 /* Custom Mat styles */
-.custommathint{
+.custommathint {
   visibility: visible;
   font-weight: 500;
   line-height: 1.35rem;
@@ -258,9 +261,8 @@ input[type='radio'] {
   color: #0000008a;
   display: block;
   margin: 6.5px 0 0 0;
-
 }
-.custommaterror{
+.custom-mat-error {
   visibility: visible;
   font-weight: 500;
   line-height: 1.35rem;
@@ -272,29 +274,29 @@ input[type='radio'] {
   margin: 6.5px 0 0 0;
 }
 
-@media only screen and (max-device-width : 269px) {
+@media only screen and (max-device-width: 269px) {
   .radiogroup.leftEdge {
     padding-left: 0;
   }
-  .radiogroup > label > .radioCheckmark:hover::before{
+  .radiogroup > label > .radioCheckmark:hover::before {
     display: none;
   }
-};
+}
 
-@media only screen and (max-device-width : 480px) {
+@media only screen and (max-device-width: 480px) {
   label,
   legend {
     font-size: 1.2rem;
   }
-};
+}
 
-@media only screen and (min-device-width : 269px) and (max-device-width: 820px){
+@media only screen and (min-device-width: 269px) and (max-device-width: 820px) {
   .radiogroup.leftEdge {
-      padding-left: 10px;
+    padding-left: 10px;
   }
 }
 
-@media only screen and (min-device-width : 481px) and (max-device-width : 600px) {
+@media only screen and (min-device-width: 481px) and (max-device-width: 600px) {
   label,
   legend {
     font-size: 1.225rem;

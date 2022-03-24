@@ -1,0 +1,93 @@
+:host {
+  display: block;
+  height: 100%;
+  width: 100%;
+  max-width: 1128px;
+  margin: 1rem auto;
+}
+.how-it-works-section-wrapper {
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  margin: 0;
+  display: flex;
+  overflow: hidden;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-items: center;
+  justify-content: space-between;
+}
+.how-it-works-section {
+  height: 200px;
+  width: 50%;
+  margin: 0 0 1rem 0;
+  text-align: left;
+  box-sizing: border-box;
+  position: relative;
+  flex: 1 0 auto;
+  display: flex;
+  transform: translateY(0);
+  flex-flow: column wrap;
+  align-items: flex-start;
+  justify-content: center;
+  justify-items: center;
+  background-color: #ffffff;
+  color: #004a7c;
+}
+
+.hot-purple-theme.how-it-works-section {
+  background: #004a7c;
+  background: linear-gradient(
+    90deg,
+    #004a7c,
+    #005f9f,
+    #0074c2,
+    #0089e5,
+    #099cff,
+    #2caaff,
+    #50b8ff,
+    #73c6ff,
+    #96d5ff,
+    #b9e3ff,
+    #dcf1ff,
+    #ffffff
+  );
+  color: #ffffff;
+  padding: 0;
+}
+.hot-purple-theme.how-it-works-section > span {
+  align-self: center;
+  text-align: center;
+}
+
+.how-it-works-section > .small-text {
+  font-weight: bold;
+  position: absolute;
+  top: 25px;
+}
+
+@media only screen and (max-device-width: 541px) {
+  .how-it-works-section-wrapper {
+    flex-direction: column;
+  }
+  .how-it-works-section {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-device-width: 550px) {
+  .how-it-works-section > .small-text {
+    top: 10px;
+  }
+  .how-it-works-section {
+    height: 150px;
+  }
+}
+
+@media only screen and (min-device-width: 551px) and (max-device-width: 610px) {
+  .how-it-works-section > .small-text {
+    top: 15px;
+  }
+}

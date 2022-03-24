@@ -1,57 +1,58 @@
-:host{
-    background-color:#FFFFFF;
-    justify-self: stretch;
-    align-self: center;
-    height: 60.5px;
-    box-sizing: border-box;
-    padding: 1rem 0;
+:host {
+  background-color: #ffffff;
+  justify-self: stretch;
+  align-self: center;
+  height: 60.5px;
+  box-sizing: border-box;
+  padding: 1rem 0;
+  margin: 0;
+}
+.header {
+  display: flex;
+  flex-flow: row nowrap;
+  flex: 100%;
+  justify-content: space-between;
+  align-self: center;
+  margin: 0 2rem;
+  height: 100%;
+}
+
+.brand-container {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  color: #001523;
+  background-color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 3.3rem;
+  font-weight: bold;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+.signin-signup {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+@media only screen and (max-device-width: 480px) {
+  .header {
+    margin: 0 1rem;
+  }
+  .signin {
     margin: 0;
-}
-.header{
-    display: flex;
-    flex-flow: row nowrap;
-    flex: 100%;
-    justify-content: space-between;
-    align-self: center;
-    margin:0 2rem;
-    height: 100%;
-}
-
-.brandcontainer{
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    color: #001523;
-    background-color: #FFFFFF;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 3.3rem;
-    font-weight: bold;
-    text-transform: capitalize;
-    cursor: pointer;
-}
-.signinsignup{
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
+  }
+  .signin,
+  .signup {
+    padding: 0 1rem;
+  }
+  .brand-container {
+    font-size: 2.475rem;
+  }
 }
 
-@media only screen and (max-device-width : 480px) {
-    .header{
-        margin:0 1rem;
-    }
-    .signin {
-        margin:0;
-    }
-    .signin, .signup{
-        padding: 0 1rem;
-    }
-    .brandcontainer{
-        font-size: 2.475rem;
-    }
-}
-
-@media only screen and (min-device-width : 481px) and (max-device-width : 600px) {
-    .brandcontainer{
-        font-size: 2.8rem;
-    }
+@media only screen and (min-device-width: 481px) and (max-device-width: 600px) {
+  .brand-container {
+    font-size: 2.8rem;
+  }
 }

@@ -1,0 +1,93 @@
+:host {
+  display: block;
+  height: 100%;
+  width: 100%;
+  max-width: 1128px;
+  margin: 1rem auto;
+}
+
+.magic-cards-container-wrapper {
+  display: block;
+  overflow: visible;
+  height: inherit;
+  width: inherit;
+}
+
+.magic-cards-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+  height: auto;
+  width: inherit;
+  box-sizing: border-box;
+}
+
+.magic-cards-child {
+  padding: 0 1rem;
+  height: 100%;
+  min-height: 4.6rem;
+  position: relative;
+  box-sizing: inherit;
+  border: none;
+  margin: 1rem 0.5rem 1rem 0;
+  flex: 1 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2.3rem; /* half of the height */
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.magic-cards-child.tall {
+  min-height: 5.6rem;
+  border-radius: 2.8rem;
+}
+
+.magic-cards-child.short {
+  min-height: 3.6rem;
+  border-radius: 1.8rem;
+}
+
+.magic-cards-child > span {
+  font-weight: 500;
+}
+
+.white.magic-cards-child {
+  border-color: #0f0f0f;
+  border: 1px solid;
+  box-sizing: border-box;
+}
+
+.white.magic-cards-child-start {
+  color: #0f0f0f;
+  background-color: #ffffff;
+}
+
+.blue.magic-cards-child-start {
+  color: #0f0f0f;
+  background-color: #e8f1f5;
+}
+
+.magic-cards-child-selected {
+  background-color: #005691;
+  color: #ffffff;
+  border: none;
+}
+.simple-text {
+  opacity: 1;
+}
+
+.checkmark {
+  visibility: hidden;
+  position: absolute;
+  content: url(/assets/images/21X17/checkmarks/solidwhite.png);
+  max-width: 21px;
+  width: 100%;
+  max-height: 17px;
+  height: auto;
+}
