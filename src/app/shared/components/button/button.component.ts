@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { TButton } from './data-structure/button.type';
 
 @Component({
   selector: 'app-button',
@@ -8,7 +9,7 @@ import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 })
 export class ButtonComponent {
   // minimal solid accent hot borders round tall short signin signup no-line stretch disabled. Default is 4.2rem height. Short is 3.6. Tall is 4.6.
-  @Input() buttonStyle: string = '';
+  @Input() buttonStyle: TButton[] = [];
   @Input() disabled: boolean = false;
 
   constructor() {}

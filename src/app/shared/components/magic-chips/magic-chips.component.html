@@ -1,15 +1,15 @@
 <div class="magic-cards-container-wrapper">
-  <div class="magic-cards-container">
-    <ng-container
-      *ngFor="let itemobject of dataArray; let i = index; trackBy: trackbyID"
-    >
+  <div class="magic-cards-container" *ngIf="chips">
+    <ng-container *ngFor="let chip of chips; let i = index; trackBy: trackbyID">
       <section
-        *ngIf="itemobject | attachkey: item"
-        [class]="styleArray[i].itemclass"
+        *ngIf="chip | objectKey: chipsPrpertyToDisplay"
+        [class]="chips[i].itemClass"
         (click)="selectedItem(i)"
-        [@selectanime]="styleArray[i].animestate"
+        [@selectanime]="chips[i].animeState"
       >
-        <span class="simple-text">{{ itemobject | attachkey: item }}</span>
+        <span class="simple-text">{{
+          chip | objectKey: chipsPrpertyToDisplay
+        }}</span>
         <span class="checkmark"></span>
       </section>
     </ng-container>

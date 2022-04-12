@@ -24,8 +24,8 @@ export class HowItWorksComponent implements OnInit {
   inlineStyleToggler: boolean = true;
   animeStates: string = 'none';
   innerWidth: number = window.innerWidth;
-  @Input() howItWorksdata!: Array<string>;
-  @Output() leftcardstate: EventEmitter<boolean> = new EventEmitter();
+  @Input() howItWorksdata!: string[];
+  @Output() leftCardState: EventEmitter<boolean> = new EventEmitter();
   @ViewChild('howItWorks') howItWorks!: ElementRef;
   @HostListener('window:scroll', ['$event']) getelpos(e: any) {
     let viewportOffset = this.howItWorks.nativeElement.getBoundingClientRect();
@@ -73,7 +73,7 @@ export class HowItWorksComponent implements OnInit {
       this.animeStates = 'final';
       //This one adds other inline styles (when there is no left card)
       this.inlineStyleToggler = false;
-      this.leftcardstate.emit(this.toggler);
+      this.leftCardState.emit(this.toggler);
     }
   }
   //This function starts only when the inlineStyleToggler is true, i.e. when the left card is visible > 541
@@ -99,7 +99,7 @@ export class HowItWorksComponent implements OnInit {
     this.inlineStyleToggler = false;
     this.animeStates = 'final';
     this.toggler = false;
-    this.leftcardstate.emit(this.toggler);
+    this.leftCardState.emit(this.toggler);
     this.innerWidth > 541
       ? smoothScroll(this.howItWorks.nativeElement, 1000)
       : null;

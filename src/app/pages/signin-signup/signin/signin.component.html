@@ -1,0 +1,74 @@
+<div class="central signin-container">
+  <form class="inner-form" [formGroup]="signingroup">
+    <section class="call-for-action">
+      <h4 class="simple-secondary-headline">Sign in</h4>
+      <p class="small-text">Sign in to your Claimletters account.</p>
+    </section>
+    <div class="controlgroup">
+      <label for="email" class="simple-text">E-mail</label>
+      <input
+        type="email"
+        id="email"
+        formControlName="email"
+        [class]="showEmailError ? 'error' : null"
+        (blur)="checkEmailValidity()"
+      />
+      <span class="custommathint" *ngIf="!showEmailError"
+        >You can use letters, numbers and
+        <span class="tooltip allowed-char">special charаchters.</span></span
+      >
+      <span
+        class="custom-mat-error"
+        *ngIf="showEmailError"
+        [errorObject]="email?.errors"
+        (errorMessage)="emailMessage = $event"
+        >{{ emailMessage }}</span
+      >
+    </div>
+    <div class="controlgroup">
+      <label for="email" class="simple-text">Password</label>
+      <input
+        type="password"
+        id="password"
+        formControlName="password"
+        [class]="showPassError ? 'error' : null"
+        (blur)="checkPasswordValidity()"
+      />
+      <span class="custommathint" *ngIf="!showPassError"
+        >Use 6 or more letters, numbers or
+        <span class="tooltip allowed-char">special charаchters.</span></span
+      >
+      <span
+        class="custom-mat-error"
+        *ngIf="showPassError"
+        [errorObject]="password?.errors"
+        (errorMessage)="passwordMessage = $event"
+        >{{ passwordMessage }}</span
+      >
+    </div>
+    <p class="password-forget f-link" routerLink="/forgotpassword">
+      Forgot password?
+    </p>
+    <app-button
+      [buttonStyle]="['accent', 'tall', 'round', 'no-line', 'stretch']"
+      [disabled]="!signingroup.valid"
+      (click)="signIn()"
+      >Sign in</app-button
+    >
+    <section class="footer pass">
+      <p class="small-text">New to Claimletters?</p>
+      <app-button
+        [buttonStyle]="[
+          'minimal',
+          'tall',
+          'round',
+          'no-line',
+          'stretch',
+          'borders'
+        ]"
+        routerLink="/signup"
+        >Sign up</app-button
+      >
+    </section>
+  </form>
+</div>
