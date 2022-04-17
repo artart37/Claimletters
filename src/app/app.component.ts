@@ -8,7 +8,6 @@ import { smoothAppearance } from './shared/animations/general-anime';
   animations: [smoothAppearance],
 })
 export class AppComponent {
-  title: string = 'Claimletters';
   headerSigninSignup: boolean = true;
   centralized!: boolean;
 
