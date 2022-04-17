@@ -2,7 +2,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 import {
   TGenericKeyValueObject,
   TGenericObjectKeyType,
-} from 'src/app/shared/types/generics.type';
+} from '../../../../shared/types/generics.type';
 
 @Pipe({
   name: 'objectKey',

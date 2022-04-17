@@ -29,7 +29,7 @@ export class MagicChipsComponent implements OnInit {
   }
 
   private initChipsAndStyling(): IChipTitles[] {
-    return this.chips.map((v) => {
+    return this.chips?.map((v) => {
       return {
         ...v,
         itemClass: 'magic-cards-child magic-cards-child-start ',

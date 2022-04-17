@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { HowItWorksComponent } from './how-it-works.component';
 
@@ -8,9 +9,9 @@ describe('HowItWorksComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ HowItWorksComponent ]
-    })
-    .compileComponents();
+      imports: [BrowserAnimationsModule],
+      declarations: [HowItWorksComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

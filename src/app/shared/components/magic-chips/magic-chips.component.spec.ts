@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ObjectKeyPipe } from '../../pipes/generic/object-key/object-key.pipe';
 import { MagicChipsComponent } from './magic-chips.component';
 
@@ -8,6 +9,7 @@ describe('MagicChipsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      imports: [BrowserAnimationsModule],
       declarations: [MagicChipsComponent, ObjectKeyPipe],
     }).compileComponents();
   });
