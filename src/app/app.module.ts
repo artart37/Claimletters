@@ -8,7 +8,6 @@ import { HomeModule } from './pages/home/modules/home.module';
 //Root routing
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
 @NgModule({
   declarations: [AppComponent],
 
