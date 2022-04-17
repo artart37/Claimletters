@@ -1,8 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { passwordValidation } from '../../../shared/directives/custom-validation/reactive-only/password-validation';
-import { emailValidation } from '../../../shared/directives/custom-validation/template-reactive/email-validation-template-reactive';
-
+import { emailValidation } from '../../../shared/custom-functions/validation/email/email-validation';
+import { passwordValidation } from '../../../shared/custom-functions/validation/password/password-validation';
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',

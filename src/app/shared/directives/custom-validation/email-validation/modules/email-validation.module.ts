@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
-import { EmailValidationDirective } from '../directives/custom-validation/template-reactive/email-validation-template-reactive';
-import { ErrorMessageDirective } from '../directives/error-message/error-message.directive';
+import { EmailValidationDirective } from '../email-validation-directive/email-validation.directive';
+import { ErrorMessageDirective } from '../../../error-message/error-message.directive';
 
 @NgModule({
   declarations: [EmailValidationDirective, ErrorMessageDirective],

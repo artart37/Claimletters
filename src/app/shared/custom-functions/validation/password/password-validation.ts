@@ -1,6 +1,8 @@
 import { AbstractControl } from '@angular/forms';
 
-//Password validation function
+/**
+ * Password validation function
+ */
 export function passwordValidation(
   control: AbstractControl
 ): { [key: string]: any } | null {

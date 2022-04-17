@@ -10,7 +10,7 @@ import {
   ChangeDetectionStrategy,
 } from '@angular/core';
 import { howItWorks } from '../../animations/main-page';
-import { smoothScroll } from '../../custom-functions/smooth-scroll';
+import { smoothScroll } from '../../custom-functions/ui-functions/smooth-scroll';
 
 @Component({
   selector: 'app-how-it-works',

@@ -5,7 +5,7 @@ import { ButtonsModule } from '../../../../shared/components/button/modules/butt
 
 import { SigninRoutingModule } from './signin-routing.module';
 import { SigninComponent } from '../signin.component';
-import { EmailValidation } from '../../../../shared/modules/email-validation.module';
+import { EmailValidation } from '../../../../shared/directives/custom-validation/email-validation/modules/email-validation.module';
 
 @NgModule({
   declarations: [SigninComponent],
