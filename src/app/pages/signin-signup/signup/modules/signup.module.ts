@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
-import { ButtonsModule } from 'app/shared/components/button/modules/buttons.module';
-import { EmailValidation } from 'app/shared/modules/email-validation.module';
+import { ButtonsModule } from '../../../../shared/components/button/modules/buttons.module';
+import { EmailValidation } from '../../../../shared/modules/email-validation.module';
 import { SignupRoutingModule } from './signup-routing.module';
 import { SignupComponent } from '../signup.component';
 

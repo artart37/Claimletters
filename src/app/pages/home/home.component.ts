@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { rightleft } from 'app/shared/animations/general-anime';
+import { rightleft } from '../../shared/animations/general-anime';
 import { HOW_IT_WORKS } from './enums/how-it-works-cards-enum';
 
 @Component({
