@@ -14,7 +14,7 @@ export function emailValidation(
       return null;
     } else {
       if (emailvalue.length === 0) {
-        return { emailRequiredEerror: true };
+        return { emailRequiredError: true };
       } else {
         return { emailValidError: true };
       }
