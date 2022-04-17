@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
 import { ButtonsModule } from '../../../shared/components/button/modules/buttons.module';
 
 import { PageNotFoundComponent } from './page-not-found.component';
@@ -9,7 +10,7 @@ describe('PageNotFoundComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ButtonsModule],
+      imports: [RouterTestingModule, ButtonsModule],
       declarations: [PageNotFoundComponent],
     }).compileComponents();
   });
